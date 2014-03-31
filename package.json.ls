@@ -14,6 +14,7 @@ bin:
   tfd: './tfd.js'
 dependencies:
   request: '>= 2.34.0'
+  winston: '>= 0.7.3'
 devDependencies:
   LiveScript: '>= 1.2.0'
   gulp: '>= 3.6.0'
