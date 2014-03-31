@@ -13,6 +13,7 @@ scripts:
 bin:
   tfd: './tfd.js'
 dependencies:
+  cheerio: '>= 0.13.1'
   request: '>= 2.34.0'
   winston: '>= 0.7.3'
 devDependencies:
