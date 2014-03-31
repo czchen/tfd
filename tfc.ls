@@ -6,6 +6,9 @@ require! {
 }
 
 parse = (body, cb) !->
+  $ = cheerio.load(body)
+  winston.info ($ '#MainTxt' .find '.hw' .eq 0 .text!)
+  cb null, null
 
 lookup = (text, cb) !->
   options = do
@@ -25,6 +28,9 @@ main = !->
     process.exit 1
 
   (err, info) <-! lookup args.join '+'
+  if err
+    winston.error err
+    process.exit 2
 
 if require.main == module
   main!
